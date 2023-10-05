@@ -16,7 +16,7 @@ python jsonl_gen_q2.py \
 
 python en_to_xx_train_q3.py \
     --processed_files_dir=processed-dataset \
-    --english_dataset=en_to_xx_translations.json
+    --english_dataset=all_translations.json
 
 
 python drive_backup.py --zip_filename=group5cat.zip

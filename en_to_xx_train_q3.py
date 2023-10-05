@@ -48,11 +48,11 @@ def generate_translations_from_en_xx(processed_files_dir):
     return results
 
 # Usage:
-processed_files_dir = 'processed-dataset'
-translations = generate_translations_from_en_xx(processed_files_dir)
+# processed_files_dir = FLAGS.processed_files_dir
+translations = generate_translations_from_en_xx(FLAGS.processed_files_dir)
 
 # Save to all_translations.json file without using Pandas
-with open('all_translations.json', 'w', encoding='utf-8') as f:
+with open(FLAGS.english_dataset, 'w', encoding='utf-8') as f:
     json.dump(translations, f, ensure_ascii=False, indent=4)
 
 logging.info('Translations have been saved to all_translations.json')
